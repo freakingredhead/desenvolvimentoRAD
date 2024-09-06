@@ -1,0 +1,31 @@
+def is_phishing_link(url):
+   
+    phishing_patterns = [
+        "grátis", "ganhar", "prêmio", "clique", "verificar", "conta", "banco", "senha",
+        "atualização", "urgente", "confirmação", "segurança", "bloqueio", "acesso", "promoção",
+        "oferta", "desconto", "recompensa", "ganhe", "ajuda", "verifique", "alerta", "suporte",
+        "instruções", "comprovação", "resolução", "documento", "anexo", "acordo", "compra", "transação",
+        "solicitação", "prorrogação", "novo", "você ganhou", "código", "autorização", "registro",
+        "endereço", "informações pessoais", "confidencial", "urgência", "perigo", "atendimento", "recuperação",
+        "fatura", "inscrição", "subscrição", "certificação", "notificação", "informe", "contato"
+    ]
+    
+    for pattern in phishing_patterns:
+        if pattern.lower() in url.lower():
+            return True
+    return False
+
+url = input("Insira o link: ")
+
+if is_phishing_link(url):
+    print(
+        "Cuidado! Esse link pode ser phishing.\n"
+        "Aqui estão cinco dicas para verificar se um e-mail pode ser phishing:\n"
+        "1. Verifique o remetente: Veja se o endereço de e-mail é legítimo e corresponde ao domínio oficial da empresa ou serviço.\n"
+        "2. Desconfie de links suspeitos: Passe o mouse sobre os links (sem clicar) para ver o endereço real e verifique se ele parece legítimo.\n"
+        "3. Procure erros de gramática: Muitos e-mails de phishing contêm erros gramaticais ou ortográficos.\n"
+        "4. Não forneça informações pessoais: Nunca compartilhe senhas, números de cartão de crédito ou outras informações sensíveis por e-mail.\n"
+        "5. Desconfie de urgência: E-mails que criam um senso de urgência para que você tome uma ação rápida geralmente são suspeitos."
+    )
+else:
+    print("Esse link parece seguro.")
