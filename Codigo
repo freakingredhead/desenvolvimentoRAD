@@ -1,13 +1,13 @@
 def is_phishing_link(url):
    
     phishing_patterns = [
-        "grátis", "ganhar", "prêmio", "clique", "verificar", "conta", "banco", "senha",
-        "atualização", "urgente", "confirmação", "segurança", "bloqueio", "acesso", "promoção",
+        "gratis", "ganhar", "premio", "clique", "verificar", "conta", "banco", "senha",
+        "atualizacao", "urgente", "confirmacao", "seguranca", "bloqueio", "acesso", "promocao",
         "oferta", "desconto", "recompensa", "ganhe", "ajuda", "verifique", "alerta", "suporte",
-        "instruções", "comprovação", "resolução", "documento", "anexo", "acordo", "compra", "transação",
-        "solicitação", "prorrogação", "novo", "você ganhou", "código", "autorização", "registro",
-        "endereço", "informações pessoais", "confidencial", "urgência", "perigo", "atendimento", "recuperação",
-        "fatura", "inscrição", "subscrição", "certificação", "notificação", "informe", "contato"
+        "instrucao", "comprovacao", "resolucao", "documento", "anexo", "acordo", "compra", "transacao",
+        "solicitacao", "prorrogacao", "novo", "voce ganhou", "codigo", "autorizacao", "registro",
+        "endereco", "informacoes pessoais", "confidencial", "urgencia", "perigo", "atendimento", "recuperacao",
+        "fatura", "inscricao", "subscricao", "certificacao", "notificacao", "informe", "contato"
     ]
     
     for pattern in phishing_patterns:
